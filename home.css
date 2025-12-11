@@ -1,0 +1,195 @@
+/* CSS Reset */
+html {
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    background: rgb(252, 197, 22);
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem 0 4rem;
+}
+
+.home-logo {
+    display: flex;
+}
+
+.home-logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.home-logo h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: rgb(52, 108, 98);
+    align-self: center;
+}
+
+/* Nav */
+nav {
+    text-align: center;
+}
+
+nav a {
+    font-size: 1.6rem;
+    margin: 0 15px;
+    color: rgb(52, 108, 98);
+    text-decoration: none;
+}
+
+/* Intro Section */
+#intro-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.intro-title {
+    height: 600px;
+    width: 600px;
+}
+
+.intro-title h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: rgb(52, 108, 98);
+    padding: 10px;
+}
+
+.intro-title p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-top: 20px;
+    color: rgb(52, 108, 98);
+}
+
+.intro-image {
+    height: 100%;
+}
+
+.intro-image img {
+    width: 600px;
+    height: 600px;
+    /* need to make this image so you can't click on it. */
+}
+
+/* About Section */
+#about-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-title {
+    width: 60%;
+}
+
+.about-title h3 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: rgb(52, 108, 98);
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.about-title p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-top: 20px;
+    color: rgb(52, 108, 98);
+}
+
+/* Products Section */
+#products-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+
+.products-title {
+    grid-column: span 2;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.products-title h3 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: rgb(52, 108, 98);
+}
+
+.products-title p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-top: 20px;
+    color: rgb(52, 108, 98);
+}
+
+.product-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 2rem 0;
+    text-align: center;
+    width: 50%;
+}
+
+.product-card img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1rem;
+}
+
+.product-card h4 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    font-size: 1.2rem;
+}
+
+/* Contact Us Section */
+#contact-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer */
+footer {
+    background: rgb(52, 108, 98);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+}
