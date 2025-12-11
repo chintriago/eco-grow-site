@@ -14,17 +14,18 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div id="body-wrapper">
         <header>
             <section class="home-logo">
                 <img src="images/home-icon.svg" alt="Eco-Grow Logo" />
                 <h1>Eco-Grow</h1>
             </section>
             <nav>
-                <a href="index.html">Home</a> |
+                <a href="#body-wrapper">Home</a> |
                 <a href="#about-wrapper">About Us</a> |
                 <a href="#products-wrapper">Products</a> |
-                <a href="#">Contact</a>
+                <a href="#learn-more-wrapper">Learn More</a> |
+                <a href="#contact-wrapper">Contact</a>
             </nav>
         </header>
         <main>
@@ -69,9 +70,12 @@
                         positive impact on the environment.
                     </p>
                 </div>
+                <div class="about-image">
+                    <img src="images/intro-image.svg" alt="About Eco-Grow" />
+                </div>
             </section>
             <section id="products-wrapper">
-                <div class="products">
+                <div class="products-grid">
                     <div class="products-title">
                         <h3>Our Products</h3>
                         <p>Discover our range of eco-friendly gardening solutions designed to help you grow sustainably.
@@ -100,6 +104,29 @@
                             garden.
                         </p>
                     </div>
+                </div>
+            </section>
+            <section id="contact-wrapper">
+                <div class="contact-title">
+                    <h3>Contact Us</h3>
+                    <p>
+                        Have questions or need assistance? We're here to help! Reach out to our friendly customer
+                        service team for support with your Eco-Grow products or any inquiries you may have.
+                    </p>
+                </div>
+                <div class="contact-form">
+                    <form action="#" method="post">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required />
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+
+                        <button type="submit">Send Message</button>
+                    </form>
                 </div>
             </section>
         </main>
