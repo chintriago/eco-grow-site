@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sustainable Gardening Website</title>
+    <title>Eco-Grow</title>
+    <link rel="icon" href="images/home-icon.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,11 +28,16 @@
                 <a href="#learn-more-wrapper">Learn More</a> |
                 <a href="#contact-wrapper">Contact</a>
             </nav>
+            <section class="header-buttons">
+                <button class="login-btn">login</button>
+                <button class="signup-btn">Sign up</button>
+                <button class="cart"><img src="images/shopping-cart.png" alt="Cart" /></button>
+            </section>
         </header>
         <main>
             <section id="intro-wrapper">
                 <div class="intro-title">
-                    <h2>Eco-Grow Composter Kit</h2>
+                    <h1>Eco-Grow Composter Kit</h1>
                     <p>
                         Don’t let scraps go to waste. With our all-in-one composting kit, every peel, leaf, and leftover
                         becomes a new possibility. Transform your kitchen waste into nutrient-rich compost that helps
@@ -49,7 +55,7 @@
             </section>
             <section id="about-wrapper">
                 <div class="about-title">
-                    <h3>Welcome to Eco-Grow!</h3>
+                    <h2>Welcome to Eco-Grow!</h2>
                     <p>
                         At Eco-Grow, we believe in the power of sustainable living and
                         the joy of growing your own food. Our mission is to provide
@@ -77,7 +83,7 @@
             <section id="products-wrapper">
                 <div class="products-grid">
                     <div class="products-title">
-                        <h3>Our Products</h3>
+                        <h2>Our Products</h2>
                         <p>Discover our range of eco-friendly gardening solutions designed to help you grow sustainably.
                         </p>
                     </div>
@@ -85,17 +91,29 @@
                         <img src="images/compost-kit.svg" alt="Eco-Grow Composter Kit" />
                         <h4>Eco-Grow Composter Kit</h4>
                         <p>Turn your kitchen scraps into nutrient-rich compost with our all-in-one composter kit.</p>
+                        <div class="product-meta">
+                            <span class="product-price">$39.99</span>
+                            <a class="product-btn" href="#products-wrapper">Buy</a>
+                        </div>
                     </div>
                     <div class="product-card">
                         <img src="images/seed-kit.svg" alt="Eco-Grow Seed Starter Pack" />
                         <h4>Eco-Grow Seed Star
                             ter Pack</h4>
                         <p>Kickstart your garden with our selection of organic seeds, perfect for urban gardening.</p>
+                        <div class="product-meta">
+                            <span class="product-price">$14.99</span>
+                            <a class="product-btn" href="#products-wrapper">Buy</a>
+                        </div>
                     </div>
                     <div class="product-card">
                         <img src="images/tool-kit.svg" alt="Eco-Grow Gardening Tools Set" />
                         <h4>Eco-Grow Gardening Tools Set</h4>
                         <p>Essential tools designed for small-space gardening, made from sustainable materials.</p>
+                        <div class="product-meta">
+                            <span class="product-price">$49.99</span>
+                            <a class="product-btn" href="#products-wrapper">Buy</a>
+                        </div>
                     </div>
                     <div class="product-card">
                         <img src="images/book-kit.svg" alt="Eco-Grow Plant Care Guide" />
@@ -103,7 +121,132 @@
                         <p>Your go-to resource for tips and tricks on nurturing your plants and maintaining a healthy
                             garden.
                         </p>
+                        <div class="product-meta">
+                            <span class="product-price">$9.99</span>
+                            <a class="product-btn" href="#products-wrapper">Buy</a>
+                        </div>
                     </div>
+                </div>
+            </section>
+
+            <section id="learn-more-wrapper" class="sustainable-garden">
+                <div class="learn-more-title">
+                    <h2>Sustainable Gardening in Small Spaces</h2>
+                    <p class="intro">
+                        You don’t need a large backyard to grow sustainably. With smart plant choices and eco-friendly
+                        techniques, balconies, patios, and even windowsills can become productive green spaces.
+                    </p>
+                </div>
+                <div class="tips-grid">
+
+                    <article class="tip-card">
+                        <img src="images/container-garden.jpg" alt="Container gardening on a balcony">
+                        <div class="tip-content">
+                            <h3>Use Containers Wisely</h3>
+                            <ul>
+                                <li>Choose pots with drainage holes to prevent root rot.</li>
+                                <li>Reuse containers to reduce waste.</li>
+                                <li>Use lightweight soil mixes for better aeration.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="tip-card">
+                        <img src="images/vertical-garden.jpg" alt="Vertical garden on a small wall">
+                        <div class="tip-content">
+                            <h3>Grow Vertically</h3>
+                            <ul>
+                                <li>Install wall planters or hanging baskets.</li>
+                                <li>Train climbing plants like beans or peas upward.</li>
+                                <li>Maximize space without crowding plants.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="tip-card">
+                        <img src="images/watering-can.jpg" alt="Watering plants efficiently">
+                        <div class="tip-content">
+                            <h3>Conserve Water</h3>
+                            <ul>
+                                <li>Water early in the morning to reduce evaporation.</li>
+                                <li>Collect rainwater when possible.</li>
+                                <li>Use mulch to keep soil moist longer.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="tip-card">
+                        <img src="images/herbs-window.jpg" alt="Herbs growing on a windowsill">
+                        <div class="tip-content">
+                            <h3>Choose the Right Plants</h3>
+                            <ul>
+                                <li>Select herbs and vegetables suited for small spaces.</li>
+                                <li>Grow native plants that need less water.</li>
+                                <li>Rotate crops to keep soil healthy.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="tip-card">
+                        <img src="images/compost-small.jpg" alt="Small compost bin for apartments">
+                        <div class="tip-content">
+                            <h3>Compost on a Small Scale</h3>
+                            <ul>
+                                <li>Use a compact compost bin or worm composting system.</li>
+                                <li>Compost food scraps like vegetable peels and coffee grounds.</li>
+                                <li>Create nutrient-rich soil naturally and reduce kitchen waste.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="tip-card">
+                        <img src="images/pollinator-plants.jpg" alt="Pollinator-friendly flowers in pots">
+                        <div class="tip-content">
+                            <h3>Support Pollinators</h3>
+                            <ul>
+                                <li>Plant flowers that attract bees and butterflies.</li>
+                                <li>Avoid chemical pesticides and herbicides.</li>
+                                <li>Encourage a healthier urban ecosystem.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="tip-card">
+                        <img src="images/native-plants.jpg" alt="Native plants in pots">
+                        <div class="tip-content">
+                            <h3>Use Native Plants</h3>
+                            <ul>
+                                <li>Native species need less water and support local wildlife.</li>
+                                <li>They adapt well to local soil and climate.</li>
+                                <li>Lower maintenance and long-term resilience.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="tip-card">
+                        <img src="images/reduce-lawn.jpg" alt="Reduced lawn with native beds">
+                        <div class="tip-content">
+                            <h3>Reduce Lawn Area</h3>
+                            <ul>
+                                <li>Replace lawn patches with native plantings or edible beds.</li>
+                                <li>Increase biodiversity and reduce maintenance.</li>
+                                <li>Create usable garden space for food or pollinators.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="tip-card">
+                        <img src="images/rain-barrel.jpg" alt="Rain barrel collecting water">
+                        <div class="tip-content">
+                            <h3>Harvest Rainwater</h3>
+                            <ul>
+                                <li>Collect rainwater in barrels for garden use.</li>
+                                <li>Lower water bills and conserve municipal water.</li>
+                                <li>Use simple systems to capture runoff from gutters.</li>
+                            </ul>
+                        </div>
+                    </article>
+
                 </div>
             </section>
             <section id="contact-wrapper">

@@ -15,7 +15,6 @@ html {
 
 body {
     font-family: "Raleway", sans-serif;
-    /* background: rgb(252, 197, 22); */
 }
 
 /* Header */
@@ -24,7 +23,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem 4rem;
+    /* padding: .5rem 4rem; */
     background: rgb(252, 197, 22);
     position: sticky;
     top: 0;
@@ -47,17 +46,66 @@ header {
     align-self: center;
 }
 
+.header-buttons {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.login-btn,
+.signup-btn {
+    background: rgb(52, 108, 98);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    align-self: center;
+
+}
+
+.cart {
+    background: none;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    margin-left: 10px;
+}
+
+.cart img {
+    width: 30px;
+    height: 30px;
+}
+
+.cart:hover {
+    transform: scale(1.1);
+}
+
+
+.login-btn:hover,
+.signup-btn:hover {
+    background: rgb(40, 85, 78);
+}
+
 /* Nav */
 nav {
     text-align: center;
 }
 
 nav a {
-    font-size: 1.25rem;
-    font-weight: bolder;
+    font-size: 1.55rem;
+    font-weight: 800;
     margin: 0 15px;
     color: rgb(52, 108, 98);
     text-decoration: none;
+    display: inline-block;
+    transform-origin: center;
+    transition: transform 0.18s ease, color 0.18s ease;
+
+}
+
+nav a:hover {
+    transform: scale(1.10);
 }
 
 /* Intro Section */
@@ -80,15 +128,15 @@ nav a {
     align-items: flex-start;
 }
 
-.intro-title h2 {
-    font-size: 3.5rem;
+.intro-title h1 {
+    font-size: 3rem;
     font-weight: 800;
     color: rgb(52, 108, 98);
     padding: 10px;
 }
 
 .intro-title p {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     font-weight: 500;
     line-height: 1.6;
     margin-top: 20px;
@@ -112,7 +160,7 @@ nav a {
     flex-direction: row-reverse;
     justify-content: space-evenly;
     align-items: center;
-    background: rgb(255, 255, 255);
+    background-color: #f7faf7;
 }
 
 .about-title {
@@ -124,9 +172,9 @@ nav a {
     align-items: flex-start;
 }
 
-.about-title h3 {
-    font-size: 3.25rem;
-    font-weight: 800;
+.about-title h2 {
+    font-size: 3rem;
+    font-weight: 900;
     color: rgb(52, 108, 98);
     margin-bottom: 4rem;
     text-align: center;
@@ -156,25 +204,60 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(213, 245, 255);
+    background-color: #f7faf7;
 }
 
 .products-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-items: center;
-    width: 80%;
-    margin: 4rem 0;
+    /* single row of 4 cards on wide screens */
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    gap: 2rem;
+    width: 90%;
+    max-width: 1200px;
+    margin: 2.5rem auto;
+    align-items: stretch;
+    grid-auto-rows: 1fr;
+    margin-bottom: 6rem;
+}
+
+.product-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    margin-top: .5rem;
+    padding-top: .5rem;
+    border-top: 1px solid rgba(17, 45, 38, 0.04);
+}
+
+.product-price {
+    font-weight: 900;
+    color: var(--accent);
+}
+
+.product-btn {
+    background: var(--accent);
+    color: #fff;
+    padding: .45rem .7rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    display: inline-block;
+}
+
+.product-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(47, 143, 118, 0.12)
 }
 
 .products-title {
-    grid-column: span 2;
+    grid-column: 1 / -1;
     text-align: center;
-    margin: 4rem 0;
+    margin: 6rem 0;
 }
 
-.products-title h3 {
-    font-size: 3.5rem;
+.products-title h2 {
+    font-size: 3rem;
     font-weight: 800;
     color: rgb(52, 108, 98);
     margin-bottom: 1rem;
@@ -187,14 +270,24 @@ nav a {
     margin-bottom: 2rem;
 }
 
+
 .product-card {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1rem 2rem;
-    margin: 2rem 0 4rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(17, 45, 38, 0.04);
+    padding: 1rem;
     text-align: center;
-    width: 400px;
-    background: rgb(217, 228, 152)
+    background: #ffffff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 48px rgba(17, 45, 38, 0.08);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .product-card img {
@@ -213,6 +306,97 @@ nav a {
     font-weight: 500;
 }
 
+/* Learn More Section */
+.sustainable-garden {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7faf7;
+    min-height: 100vh;
+}
+
+.learn-more-title {
+    margin: 8rem 0;
+}
+
+.learn-more-title h2 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: rgb(52, 108, 98);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.learn-more-title p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: rgb(52, 108, 98);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+    gap: 1.25rem 2rem;
+    align-items: stretch;
+    grid-auto-rows: 1fr;
+    max-width: 1200px;
+}
+
+.tip-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(17, 45, 38, 0.04);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.tip-card img {
+    width: 100%;
+    height: 230px !important;
+    object-fit: cover
+}
+
+@media (max-width: 980px) {
+    .tips-grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .tips-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+.tip-content {
+    padding: 1.25rem 1.5rem 1.75rem;
+}
+
+.tip-content h3 {
+    color: #2f6b3f;
+    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
+}
+
+.tip-content ul {
+    padding-left: 1.2rem;
+    color: #333;
+}
+
+.tip-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
 /* Contact Us Section */
 #contact-wrapper {
     min-height: 100vh;
@@ -221,6 +405,7 @@ nav a {
     justify-content: space-evenly;
     align-items: center;
     padding: 4rem 0;
+    background-color: #f7faf7;
 }
 
 .contact-title {
@@ -233,8 +418,8 @@ nav a {
 }
 
 .contact-title h3 {
-    font-size: 3.25rem;
-    font-weight: 800;
+    font-size: 3rem;
+    font-weight: 900;
     color: rgb(52, 108, 98);
     text-align: center;
 }
@@ -250,13 +435,95 @@ nav a {
 .contact-form {
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 100%;
+    max-width: 520px;
+    gap: 1rem;
+    background: #ffffff;
+    padding: 1.25rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(23, 50, 40, 0.06);
 }
 
+/* Form */
 form {
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: .75rem;
+}
+
+form label {
+    font-weight: 700;
+    color: #164c43;
+    margin-bottom: .25rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: .75rem 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(23, 50, 40, 0.12);
+    background: #fbfbfb;
+    font-size: 1rem;
+    color: #163f36;
+    transition: box-shadow .12s ease, border-color .12s ease, transform .08s ease;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+    color: rgba(22, 76, 67, 0.45);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2f8f76;
+    box-shadow: 0 8px 18px rgba(47, 143, 118, 0.12);
+    transform: translateY(-1px);
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background: #2f8f76;
+    color: #fff;
+    border: none;
+    padding: .85rem 1.25rem;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: transform .12s ease, box-shadow .12s ease;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(47, 143, 118, 0.18);
+}
+
+@media (max-width: 900px) {
+    #contact-wrapper {
+        flex-direction: column;
+        padding: 3rem 1.5rem;
+    }
+
+    .contact-title {
+        width: 100%;
+        height: auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-form {
+        max-width: 640px;
+    }
 }
 
 /* Footer */
@@ -266,4 +533,210 @@ footer {
     padding: 1rem 0;
     text-align: center;
     width: 100%;
+}
+
+/* Modern global typography & spacing overrides */
+:root {
+    --base-size: 16px;
+    --scale-ratio: 1.2;
+    /* slightly larger, clearer scale */
+    --max-width: 1200px;
+    --space-xxs: 4px;
+    --space-xs: 8px;
+    --space-sm: 10px;
+    --space-md: 18px;
+    --space-lg: 28px;
+    --space-xl: 40px;
+}
+
+html {
+    font-size: var(--base-size);
+}
+
+body {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #163f36;
+}
+
+/* Headings scale */
+h1 {
+    font-size: calc(var(--base-size) * var(--scale-ratio) * var(--scale-ratio) * var(--scale-ratio));
+    margin: 0 0 var(--space-sm) 0;
+}
+
+h2 {
+    font-size: calc(var(--base-size) * var(--scale-ratio) * var(--scale-ratio));
+    margin: 0 0 var(--space-sm) 0;
+}
+
+h3 {
+    font-size: calc(var(--base-size) * var(--scale-ratio));
+    margin: 0 0 var(--space-xs) 0;
+}
+
+h4,
+h5,
+h6 {
+    font-size: 1rem;
+    margin: 0 0 var(--space-xs) 0;
+}
+
+/* Global section spacing */
+section {
+    padding: var(--space-lg) 1rem;
+}
+
+main>section {
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-lg);
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem
+}
+
+/* Tighter, consistent site gutters */
+header.site-header .header-inner {
+    padding: var(--space-sm) 1rem
+}
+
+#intro-wrapper {
+    padding: calc(var(--space-lg) - 4px) 1rem
+}
+
+/* Nav and header sizes */
+.home-logo h1 {
+    font-size: 1.05rem
+}
+
+.main-nav a {
+    font-size: 0.98rem;
+    padding: .45rem .7rem
+}
+
+/* Cards and lists */
+.product-card,
+.tip-card,
+.contact-form {
+    padding: 1rem;
+    border-radius: 10px
+}
+
+.product-card h4 {
+    font-size: 1.05rem
+}
+
+.product-card p,
+.tip-content p,
+.tip-content li {
+    font-size: 0.95rem
+}
+
+/* Reduce large fixed heights used earlier */
+.intro-title,
+.about-title,
+.contact-title {
+    height: auto;
+    max-width: 720px;
+    padding: 0
+}
+
+/* Make images responsive inside cards */
+.product-card img,
+.tip-card img,
+.intro-image img,
+.about-image img {
+    max-width: 100%;
+    height: auto
+}
+
+/* Buttons, compact */
+.btn,
+.product-btn,
+.header-buttons button,
+button[type="submit"] {
+    padding: .5rem .8rem;
+    border-radius: 8px
+}
+
+/* Responsive adjustments */
+@media (max-width: 980px) {
+    h1 {
+        font-size: calc(var(--base-size) * var(--scale-ratio) * var(--scale-ratio));
+    }
+
+    h2 {
+        font-size: calc(var(--base-size) * var(--scale-ratio) * 1.1);
+    }
+
+    section {
+        padding: var(--space-md) 1rem
+    }
+}
+
+/* responsive spacing polish */
+@media (max-width: 1100px) {
+    :root {
+        --space-lg: 24px
+    }
+
+    .products-grid {
+        gap: 1rem;
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+
+    .tips-grid {
+        gap: 1rem
+    }
+}
+
+@media (max-width: 700px) {
+    section {
+        padding: var(--space-md)
+    }
+
+    .intro-title h2 {
+        font-size: 1.6rem
+    }
+
+    .products-title h3 {
+        font-size: 1.6rem
+    }
+}
+
+@media (max-width:700px) {
+    html {
+        font-size: 15px
+    }
+
+    header.site-header .header-inner {
+        padding: .5rem
+    }
+
+    .main-nav ul {
+        gap: .25rem
+    }
+
+    .product-card h4 {
+        font-size: 1rem
+    }
+
+    .tips-grid {
+        gap: .75rem
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small utility tweaks for consistent spacing */
+.intro-title p,
+.about-title p,
+.contact-title p,
+.products-title p {
+    margin-bottom: var(--space-md)
 }
